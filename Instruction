@@ -1,0 +1,26 @@
+Installing STM32CubeIDE:
+Link: https://www.st.com/content/st_com/en.html
+Step1: Register and create an account on the link first.
+Step2: Login with the credentials.
+Step3: Select the download link per the computer's OS after logging in. Accept the license agreement and .exe file will be downloaded.
+Step4: Extract the file contents and allow the installation to continue and complete.
+Step5: Select a directory as the workspace and allow the application to run. 
+Step6: Open the workspace. First we need to login to the ST account. 
+Help -> STM32Cube Update -> Connection to myST.
+Window opens, enter your credentials.
+Step7: After logging in successfully, create a project.
+File -> New -> STM32 Project.
+Step8: Select the board selector option. Commercial Part number is the name of the board that we are using.
+Step9: Type the project name. Don’t use blank spaces in the name. then, click finish.
+Project 1: Onboard LED Blinking.
+In this IDE, code is always written in between the appropriate comments. Anything written outside the comment gets erased whenever the code is regenerated or opened again. 
+Step10: Select the configuration of the required GPIO pins. STM32 board has 50 GPIO pins. 
+HAL – Hardware Abstraction Layer.
+Step11: Open the main.c file and make the required changes in the code.
+Changes made: while loop()
+HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+HAL_Delay(5);
+HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+HAL_Delay(5);
+This code will set the onboard led for 500ms and reset it for 500ms. 
+Step12: Use the build option to build the project. Then run the project to see the output. 
